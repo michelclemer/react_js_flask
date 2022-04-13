@@ -24,11 +24,13 @@ function App() {
       setEditedArticle(article)
   }
   return (
+    
     <div className="App">
       <h1>Flask and ReactJS Course</h1>
         <ArticleList  articles = {articles} editArticle = {editArticle}/>
         <Form article = {editedArticle} />
     </div>
+
   );
 }
 
