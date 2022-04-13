@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Flask and ReactJS Course</h1>
-        <ArticleList />
+        <ArticleList  articles = {articles}/>
     </div>
   );
 }
