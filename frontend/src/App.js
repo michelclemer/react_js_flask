@@ -2,6 +2,8 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import ArticleList from './components/ArticleList';
+import Form from './components/Form';
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -18,13 +20,14 @@ function App() {
      .catch(error => console.log(error))
   }, [])
   const editArticle = (article) => {
-      console.log("Hello worlds")
-      //setEditedArticle(article)
+     
+      setEditedArticle(article)
   }
   return (
     <div className="App">
       <h1>Flask and ReactJS Course</h1>
         <ArticleList  articles = {articles} editArticle = {editArticle}/>
+        <Form article = {editedArticle} />
     </div>
   );
 }
